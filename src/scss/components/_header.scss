@@ -1,0 +1,20 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+	&__h1 {
+		font-size: $fs-h1;
+		font-weight: $fw-bold;
+	}
+
+	&__theme {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-weight: $fw-bold;
+		font-size: $fs-h3;
+		color: $clr-light-secondary-lt;
+	}
+}
