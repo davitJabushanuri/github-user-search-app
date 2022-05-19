@@ -15,7 +15,7 @@ const Header = ({ theme, setTheme }) => {
 					{theme === 'LIGHT' ? 'DARK' : 'LIGHT'}
 				</h2>
 				<img
-					src={theme === 'LIGHT' ? LightThemIcon : DarkThemIcon}
+					src={theme === 'LIGHT' ? DarkThemIcon : LightThemIcon}
 					alt=''
 					className='header__theme__icon'
 				/>

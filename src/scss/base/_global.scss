@@ -4,11 +4,12 @@ html {
 
 body {
 	background-color: $clr-light-gray;
+	padding: 1rem;
+	min-height: 100vh;
 }
 
 .App {
 	display: grid;
 	grid-template-columns: 1fr;
-	padding: 2rem 1rem;
 	gap: 1rem;
 }
