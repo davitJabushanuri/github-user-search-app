@@ -76,5 +76,3 @@ Your contributions are always welcome and appreciated. Following are the things 
 ### 📝 License
 
 This project is [MIT](https://github.com/davitJabushanuri/readme/blob/master/LICENSE) licensed.
-
-> > > > > > > 549cb848ba5b8c18a064c38dd45ee813b04d81ce
