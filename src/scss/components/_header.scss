@@ -16,5 +16,12 @@
 		font-weight: $fw-bold;
 		font-size: $fs-h3;
 		color: $clr-light-secondary-lt;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+
+		&:hover {
+			color: $clr-light-secondary-dkr;
+		}
 	}
 }
