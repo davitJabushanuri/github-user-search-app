@@ -2,6 +2,10 @@ html {
 	font-family: $ff-primary;
 }
 
+body {
+	background-color: $clr-light-gray;
+}
+
 .App {
 	display: grid;
 	grid-template-columns: 1fr;

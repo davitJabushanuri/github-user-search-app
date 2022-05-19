@@ -14,7 +14,11 @@ const Header = ({ theme, setTheme }) => {
 				<h2 className='header__theme__h2'>
 					{theme === 'LIGHT' ? 'DARK' : 'LIGHT'}
 				</h2>
-				<img src={DarkThemIcon} alt='' className='header__theme__icon' />
+				<img
+					src={theme === 'LIGHT' ? LightThemIcon : DarkThemIcon}
+					alt=''
+					className='header__theme__icon'
+				/>
 			</button>
 		</section>
 	)

@@ -6,12 +6,12 @@ import Stats from './Stats'
 
 const Card = () => {
 	return (
-		<div>
+		<section className='card'>
 			<Profile />
 			<Bio />
 			<Stats />
 			<Links />
-		</div>
+		</section>
 	)
 }
 
