@@ -8,12 +8,15 @@ import Search from './components/Search'
 function App() {
 	const [theme, setTheme] = useState('LIGHT')
 	const [input, setInput] = useState('octocat')
+	const [user, setUser] = useState()
 
 	const getData = async input => {
 		const data = await fetch(`https://api.github.com/users/${input}`)
 		const user = await data.json()
-		console.log(user)
+		setUser(user)
 	}
+
+	console.log(user)
 
 	useEffect(() => {
 		getData(input)
@@ -24,7 +27,7 @@ function App() {
 			<div className='App'>
 				<Header theme={theme} setTheme={setTheme} />
 				<Search setInput={setInput} />
-				<Card input={input} />
+				<Card user={user} />
 			</div>
 		</main>
 	)

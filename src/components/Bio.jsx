@@ -1,12 +1,9 @@
 import React from 'react'
 
-const Bio = () => {
+const Bio = ({ bio }) => {
 	return (
 		<div className='bio'>
-			<p className='bio__paragraph'>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-				Quisque volutpat mattis eros.
-			</p>
+			<p className='bio__paragraph'>{bio ?? 'This profile han no bio'}</p>
 		</div>
 	)
 }

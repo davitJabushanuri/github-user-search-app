@@ -1,18 +1,14 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({ avatar, name, login, joined }) => {
 	return (
 		<div className='profile'>
 			<div className='profile__imgContainer'>
-				<img
-					src='https://avatars.githubusercontent.com/u/1500684?v=4'
-					alt=''
-					className='profile__imgContainer__image'
-				/>
+				<img src={avatar} alt='' className='profile__imgContainer__image' />
 			</div>
-			<h2 className='profile__name'>The Octocat</h2>
-			<p className='profile__nickname'>@octocat</p>
-			<p className='profile__joinDate'>Joined 25 Jan 2011</p>
+			<h2 className='profile__name'>{name}</h2>
+			<p className='profile__nickname'>@{login}</p>
+			<p className='profile__joinDate'>{joined}</p>
 		</div>
 	)
 }
