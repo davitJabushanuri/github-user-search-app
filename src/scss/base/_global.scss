@@ -3,13 +3,25 @@ html {
 }
 
 body {
-	background-color: $clr-light-gray;
-	padding: 1rem;
 	min-height: 100vh;
+	width: 100%;
+}
+
+main {
+	min-height: 100vh;
+	padding: 1rem;
 }
 
 .App {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
+}
+
+#LIGHT {
+	background-color: $clr-light-gray;
+}
+
+#DARK {
+	background-color: $clr-dark-secondary-dk;
 }

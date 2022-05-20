@@ -20,3 +20,17 @@
 		}
 	}
 }
+
+#DARK .stats {
+	background-color: $clr-dark-secondary-dk;
+
+	&__flex {
+		&__header {
+			color: $clr-light-gray;
+		}
+
+		&__number {
+			color: $clr-dark-white;
+		}
+	}
+}

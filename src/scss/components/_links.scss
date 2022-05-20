@@ -13,3 +13,14 @@
 		}
 	}
 }
+
+#DARK .links {
+	&__flex {
+		color: $clr-dark-white;
+
+		&__img {
+			filter: invert(50%) sepia(0%) saturate(345%) hue-rotate(300deg)
+				brightness(180%) contrast(150%);
+		}
+	}
+}

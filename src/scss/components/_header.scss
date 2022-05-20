@@ -7,6 +7,7 @@
 	&__h1 {
 		font-size: $fs-h1;
 		font-weight: $fw-bold;
+		color: $clr-light-secondary-dkr;
 	}
 
 	&__theme {
@@ -14,14 +15,29 @@
 		align-items: center;
 		gap: 1rem;
 		font-weight: $fw-bold;
-		font-size: $fs-h3;
-		color: $clr-light-secondary-lt;
+		font-size: $fs-h4;
 		cursor: pointer;
 		background-color: transparent;
 		border: none;
 
 		&:hover {
 			color: $clr-light-secondary-dkr;
+		}
+
+		&__h2 {
+			color: $clr-light-secondary-dk;
+		}
+	}
+}
+
+#DARK .header {
+	&__h1 {
+		color: $clr-dark-white;
+	}
+
+	&__theme {
+		&__h2 {
+			color: $clr-dark-white;
 		}
 	}
 }

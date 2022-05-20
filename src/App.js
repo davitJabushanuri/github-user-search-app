@@ -9,10 +9,12 @@ function App() {
 	const [theme, setTheme] = useState('LIGHT')
 
 	return (
-		<main className='App light'>
-			<Header theme={theme} setTheme={setTheme} />
-			<Search />
-			<Card />
+		<main id={theme}>
+			<div className='App'>
+				<Header theme={theme} setTheme={setTheme} />
+				<Search />
+				<Card />
+			</div>
 		</main>
 	)
 }

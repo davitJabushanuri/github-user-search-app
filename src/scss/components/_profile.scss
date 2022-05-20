@@ -37,3 +37,13 @@
 		font-size: $fs-h4;
 	}
 }
+
+#DARK .profile {
+	&__name {
+		color: $clr-dark-white;
+	}
+
+	&__joinDate {
+		color: $clr-light-gray;
+	}
+}

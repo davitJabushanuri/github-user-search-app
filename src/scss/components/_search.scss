@@ -56,3 +56,16 @@
 		font-size: $fs-h4;
 	}
 }
+
+#DARK .search {
+	background-color: $clr-dark-secondary-lt;
+
+	&__input {
+		background-color: $clr-dark-secondary-lt;
+		color: $clr-dark-white;
+
+		&::placeholder {
+			color: $clr-dark-white;
+		}
+	}
+}
