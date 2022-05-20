@@ -1,0 +1,15 @@
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	&__flex {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		color: $clr-light-secondary-dk;
+		&__img {
+			width: 20px;
+		}
+	}
+}
