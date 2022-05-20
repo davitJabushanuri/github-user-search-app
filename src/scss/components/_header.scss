@@ -20,8 +20,10 @@
 		background-color: transparent;
 		border: none;
 
-		&:hover {
+		&:hover > * {
 			color: $clr-light-secondary-dkr;
+			filter: invert(18%) sepia(45%) saturate(281%) hue-rotate(176deg)
+				brightness(95%) contrast(96%);
 		}
 
 		&__h2 {

@@ -48,6 +48,11 @@
 		grid-area: joinDate;
 		color: $clr-light-secondary-lt;
 		font-size: clamp($fs-h4, 10px + 1vw, $fs-base);
+
+		@media (min-width: 64rem) {
+			display: flex;
+			justify-content: flex-end;
+		}
 	}
 }
 

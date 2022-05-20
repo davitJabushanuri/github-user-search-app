@@ -13,15 +13,21 @@ const Links = () => {
 			</div>
 			<div className='links__flex'>
 				<img src={linksIcon} alt='' className='links__flex__img' />
-				<h2 className='links__flex__header'>https://github.blog</h2>
+				<a href='#' className='links__flex__header'>
+					https://github.blog
+				</a>
 			</div>
 			<div className='links__flex'>
 				<img src={twitterIcon} alt='' className='links__flex__img' />
-				<h2 className='links__flex__header'>Not Available</h2>
+				<a href='#' className='links__flex__header'>
+					Not Available
+				</a>
 			</div>
 			<div className='links__flex'>
 				<img src={companyIcon} alt='' className='links__flex__img' />
-				<h2 className='links__flex__header'>@github</h2>
+				<a href='#' className='links__flex__header'>
+					@github
+				</a>
 			</div>
 		</div>
 	)
