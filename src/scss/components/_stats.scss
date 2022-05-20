@@ -1,0 +1,22 @@
+.stats {
+	display: flex;
+	justify-content: space-around;
+	background-color: $clr-light-gray;
+	padding: 1.6rem;
+	border-radius: 10px;
+
+	&__flex {
+		@extend %statsFlex;
+
+		&__header {
+			font-size: 11px;
+			color: $clr-light-secondary-dk;
+		}
+
+		&__number {
+			font-size: $fs-h3;
+			color: $clr-light-secondary-dkr;
+			font-weight: $fw-bold;
+		}
+	}
+}
