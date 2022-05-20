@@ -9,21 +9,52 @@ const Links = ({ location, blog, twitter, company }) => {
 		<div className='links'>
 			<div className='links__flex'>
 				<img src={locationIcon} alt='' className='links__flex__img' />
-				<h2 className='links__flex__header'>{location ?? 'Not Available'}</h2>
+				{location ? (
+					<div className='links__flex__header'>{location}</div>
+				) : (
+					<div className='links__flex__header opacity'>Not Available</div>
+				)}
 			</div>
 			<div className='links__flex'>
 				<img src={linksIcon} alt='' className='links__flex__img' />
-				<a href={blog} className='links__flex__header'>
-					{blog ? blog : 'Not Available'}
-				</a>
+				{blog ? (
+					<a href={blog ? blog : '#'} className='links__flex__header'>
+						{blog}
+					</a>
+				) : (
+					<div className='links__flex__header opacity'>Not Available</div>
+				)}
 			</div>
+
 			<div className='links__flex'>
 				<img src={twitterIcon} alt='' className='links__flex__img' />
-				<div className='links__flex__header'>{twitter ?? 'Not Available'}</div>
+				{twitter ? (
+					<a
+						href={twitter && `https://twitter.com/${twitter}`}
+						className='links__flex__header'
+					>
+						{twitter}
+					</a>
+				) : (
+					<div className='links__flex__header opacity'>Not Available</div>
+				)}
 			</div>
-			<div className='links__flex'>
+
+			<div
+				href={company && `https://github.com/${company.substring(1)}`}
+				className='links__flex'
+			>
 				<img src={companyIcon} alt='' className='links__flex__img' />
-				<div className='links__flex__header'>{company ?? 'Not Available'}</div>
+				{company ? (
+					<a
+						href={company && `https://github.com/${company.substring(1)}`}
+						className='links__flex__header'
+					>
+						{company}
+					</a>
+				) : (
+					<div className='links__flex__header opacity'>Not Available</div>
+				)}
 			</div>
 		</div>
 	)
