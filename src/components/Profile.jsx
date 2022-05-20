@@ -6,7 +6,7 @@ const Profile = ({ avatar, name, login, joined }) => {
 			<div className='profile__imgContainer'>
 				<img src={avatar} alt='' className='profile__imgContainer__image' />
 			</div>
-			<h2 className='profile__name'>{name}</h2>
+			<h2 className='profile__name'>{name ? name : login}</h2>
 			<p className='profile__nickname'>@{login}</p>
 			<p className='profile__joinDate'>{joined}</p>
 		</div>

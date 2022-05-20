@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import SearchIcon from '../assets/icon-search.svg'
 
-const Search = ({ setInput }) => {
+const Search = ({ setInput, error, setError }) => {
 	const [searchWord, setSearchWord] = useState('')
 	const inputRef = useRef()
 
@@ -18,14 +18,17 @@ const Search = ({ setInput }) => {
 				<img src={SearchIcon} alt='' className='search__iconContainer__icon' />
 			</label>
 			<input
-				onChange={e => setSearchWord(e.target.value)}
+				onChange={e => {
+					setSearchWord(e.target.value)
+					setError(false)
+				}}
 				id='searchInput'
 				type='text'
 				name='search'
 				className='search__input'
 				placeholder='Search GitHub username...'
 			/>
-			<p className='search__errorMessage'></p>
+			<p className='search__errorMessage'>{error && 'No results'}</p>
 			<button onClick={handleInput} className='search__button'>
 				Search
 			</button>

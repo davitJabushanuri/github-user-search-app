@@ -9,14 +9,21 @@ function App() {
 	const [theme, setTheme] = useState('LIGHT')
 	const [input, setInput] = useState('octocat')
 	const [user, setUser] = useState()
+	const [error, setError] = useState(false)
 
 	const getData = async input => {
-		const data = await fetch(`https://api.github.com/users/${input}`)
-		const user = await data.json()
-		setUser(user)
+		try {
+			const data = await fetch(`https://api.github.com/users/${input}`)
+			const user = await data.json()
+			if (user.message) {
+				setError(true)
+				return
+			}
+			setUser(user)
+		} catch (error) {
+			throw new Error(error)
+		}
 	}
-
-	console.log(user)
 
 	useEffect(() => {
 		getData(input)
@@ -26,7 +33,7 @@ function App() {
 		<main id={theme}>
 			<div className='App'>
 				<Header theme={theme} setTheme={setTheme} />
-				<Search setInput={setInput} />
+				<Search setInput={setInput} error={error} setError={setError} />
 				<Card user={user} />
 			</div>
 		</main>
