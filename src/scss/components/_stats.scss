@@ -5,6 +5,12 @@
 	padding: 1.6rem;
 	border-radius: 10px;
 
+	@media (min-width: 64rem) {
+		margin-left: 9.4rem;
+		position: relative;
+		bottom: 4rem;
+	}
+
 	&__flex {
 		@extend %statsFlex;
 

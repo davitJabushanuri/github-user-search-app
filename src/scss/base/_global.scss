@@ -8,8 +8,8 @@ body {
 }
 
 main {
-	min-height: 100vh;
-	padding: 1rem;
+	height: 100vh;
+	padding: 0 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,6 +20,10 @@ main {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
+
+	@media (min-width: 64rem) {
+		max-width: 45rem;
+	}
 }
 
 #LIGHT {

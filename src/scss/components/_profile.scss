@@ -7,6 +7,16 @@
 		'image name'
 		'image nickname'
 		'image joinDate';
+
+	@media (min-width: 64rem) {
+		grid-template-columns: 7.4rem 1fr 1fr;
+		grid-template-areas:
+			'image name joinDate'
+			'image nickname .'
+			'image . .';
+		gap: 0 2rem;
+	}
+
 	&__imgContainer {
 		grid-area: image;
 
@@ -20,6 +30,10 @@
 		font-weight: $fw-bold;
 		font-size: clamp($fs-h3, $fs-h4 + 2vw, $fs-h1);
 		color: $clr-light-secondary-dkr;
+
+		@media (min-width: 64rem) {
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__nickname {

@@ -3,6 +3,13 @@
 	gap: 1rem;
 	margin-bottom: 2rem;
 
+	@media (min-width: 64rem) {
+		padding-left: 9.4rem;
+		position: relative;
+		bottom: 4rem;
+		margin: 0;
+	}
+
 	@media (min-width: 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}

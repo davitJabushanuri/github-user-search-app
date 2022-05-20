@@ -2,6 +2,12 @@
 	color: $clr-light-secondary-dk;
 	line-height: $lh-h3;
 	font-size: clamp($fs-h4, 10px + 1vw, $fs-base);
+
+	@media (min-width: 64rem) {
+		margin-left: 9.4rem;
+		position: relative;
+		bottom: 4rem;
+	}
 }
 
 #DARK .bio {
