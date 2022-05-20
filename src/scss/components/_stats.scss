@@ -9,12 +9,14 @@
 		@extend %statsFlex;
 
 		&__header {
-			font-size: 11px;
+			font-size: clamp(11px, 8px + 1vw, $fs-h4);
+
 			color: $clr-light-secondary-dk;
 		}
 
 		&__number {
-			font-size: $fs-h3;
+			font-size: clamp($fs-h3, $fs-h4 + 1vw, $fs-h2);
+
 			color: $clr-light-secondary-dkr;
 			font-weight: $fw-bold;
 		}

@@ -1,7 +1,7 @@
 .bio {
 	color: $clr-light-secondary-dk;
 	line-height: $lh-h3;
-	font-size: $fs-h4;
+	font-size: clamp($fs-h4, 10px + 1vw, $fs-base);
 }
 
 #DARK .bio {

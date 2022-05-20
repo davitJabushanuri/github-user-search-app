@@ -1,15 +1,14 @@
 .profile {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: clamp(4.4rem, 4rem + 5vw, 7.4rem) 1fr;
+	gap: 0 1rem;
 	grid-template-areas:
 		'image name'
 		'image nickname'
 		'image joinDate';
 	&__imgContainer {
 		grid-area: image;
-		width: 70px;
-		height: 70px;
 
 		&__image {
 			border-radius: 50%;
@@ -19,14 +18,14 @@
 	&__name {
 		grid-area: name;
 		font-weight: $fw-bold;
-		font-size: $fs-h3;
+		font-size: clamp($fs-h3, $fs-h4 + 2vw, $fs-h1);
 		color: $clr-light-secondary-dkr;
 	}
 
 	&__nickname {
 		grid-area: nickname;
 		color: $clr-light-primary;
-		font-size: $fs-h4;
+		font-size: clamp($fs-h4, $fs-h4 + 1vw, $fs-h3);
 
 		margin-bottom: 0.6rem;
 	}
@@ -34,7 +33,7 @@
 	&__joinDate {
 		grid-area: joinDate;
 		color: $clr-light-secondary-lt;
-		font-size: $fs-h4;
+		font-size: clamp($fs-h4, 10px + 1vw, $fs-base);
 	}
 }
 
