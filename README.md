@@ -1,18 +1,24 @@
 # GitHub user search app
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db).
+This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6).
 
 ## :beginner: Overview
 
-this app generates new advice on every button click.
-
-[View demo](https://davitjabushanuri.github.io/advice-generator/)
+[View demo](https://davitjabushanuri.github.io/github-user-search-app/)
 
 ## :camera:
 
 ![](./templates/template.png)
 
 ## :zap: Usage
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Search for GitHub users by their username
+- See relevant user information based on their search
+- Switch between light and dark themes
 
 ### :notebook: Pre-Requisites
 
@@ -27,8 +33,8 @@ To get a local copy up and running follow these simple example steps.
 After you've made sure to have all the tools installed, you should be able to just run a few commands to get set up
 
 ```
-git clone git@github.com:davitJabushanuri/advice-generator.git
-cd advice-generator
+git clone https://github.com/davitJabushanuri/github-user-search-app.git
+cd github-user-search-app
 npm install
 npm start
 ```
@@ -38,23 +44,36 @@ npm start
 - [React](reactjs.org)
 - [Sass](https://sass-lang.com/)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 ## :book: What I learned
+
+Handle errors manually with fetch calls
+
+```
+const data = await fetch(`https://api.github.com/users/${input}`)
+const user = await data.json()
+if (user.message) {
+setError(true)
+return
+}
+setUser(user)
+```
 
 ### :house: Development
 
 - Add animations
-- Add light theme
+- Have the correct color scheme chosen for users based on their computer preferences(prefers-color-scheme).
 
 ### 🤝 Contribution
 
 Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
 
 - **Report a bug**
-  If you think you have encountered a bug, feel free to report it [here](https://github.com/davitJabushanuri/advice-generator/issues).
+  If you think you have encountered a bug, feel free to report it [here](https://github.com/davitJabushanuri/github-user-search-app/issues).
   <br/>
 - **Request a feature**
-  If you have a suggestion that would make this better, You can request for a feature [here](https://github.com/davitJabushanuri/advice-generator/issues) with the tag "enhancement".
+  If you have a suggestion that would make this better, You can request for a feature [here](https://github.com/davitJabushanuri/github-user-search-app/issues) with the tag "enhancement".
   <br/>
 
 - **Create a pull request**
